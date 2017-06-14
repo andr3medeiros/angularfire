@@ -638,6 +638,8 @@
         function init($list) {
           var ref = firebaseArray.$ref();
 
+          firebaseArray.$$beforeInit && firebaseArray.$$beforeInit();
+
           // listen for changes at the Firebase instance
           ref.on('child_added', created, error);
           ref.on('child_moved', moved, error);

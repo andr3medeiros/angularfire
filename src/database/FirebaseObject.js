@@ -439,6 +439,10 @@
         }
 
         function init() {
+          if (firebaseObject) {
+            firebaseObject.$$beforeInit && firebaseObject.$$beforeInit();
+          }
+
           ref.on('value', applyUpdate, error);
           ref.once('value', function(snap) {
             if (angular.isArray(snap.val())) {
