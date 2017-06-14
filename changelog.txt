@@ -1,0 +1,1 @@
+new listener '$$beforeInit' on $firebaseObject and $firebaseArray to help devs to implement loading bars.
